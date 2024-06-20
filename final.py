@@ -1,67 +1,86 @@
-import yfinance as yf
+import keras
 import pandas as pd
+from datetime import datetime, timedelta
 import numpy as np
-import datetime
 import matplotlib.pyplot as plt
-from sklearn.linear_model import SGDRegressor
-from sklearn.multioutput import MultiOutputRegressor
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
+import yfinance as yf
+from sklearn.preprocessing import MinMaxScaler
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
+from sklearn.metrics import mean_squared_error
+import os
+import streamlit as st 
 
-# 現在の日時を取得
-dt_now = datetime.datetime.now()
-end = dt_now.strftime('%Y-%m-%d')
-start_day = dt_now - datetime.timedelta(days=1095)
-start = start_day.strftime('%Y-%m-%d')
 
-# 株価データの取得
-stock_code = "KO"
-ticker = yf.Ticker(stock_code)
-hist = ticker.history(start=start, end=end, interval='1d')
+class Finance:
+    def __init__(self):
+        pass
+    
+    def _get_time(self):
+        self.dt_now = datetime.now()
+        self.end = self.dt_now.strftime('%Y-%m-%d')
+        self.start_day = self.dt_now - timedelta(days=1095)
+        self.start = self.start_day.strftime('%Y-%m-%d')
+        
+        return self.start, self.end
 
-# データの整形
-df = pd.DataFrame(hist)
-df['date'] = df.index
-df['year'] = df['date'].dt.year
-df['month'] = df['date'].dt.month
-df['day'] = df['date'].dt.day
+    def get_data(self, stock_code):
+        self.start_day, self.end_day = self._get_time()
+        self.df = yf.download(stock_code, start=self.start_day, end=self.end_day, interval='1d')
+        self.data = self.df.filter(['Close'])
+        self.dataset = self.data.values
+        
+        return self.dataset
 
-# 特徴量とターゲットの設定
-X = df[['year', 'month', 'day']]
-y = df[['Open', 'High', 'Low', 'Close']]
+    def plot_data(self, x, y, title, xlabel, ylabel, save_path):
+        plt.figure(figsize=(16,6))
+        plt.title(title)
+        plt.plot(x, y)
+        plt.xlabel(xlabel, fontsize=18)
+        plt.ylabel(ylabel, fontsize=18)
+        plt.savefig(save_path)
+        
+    def normalize_data(self, data):
+        self.scaler = MinMaxScaler(feature_range=(0,1))
+        self.scaled_data = self.scaler.fit_transform(data)
+        
+        return self.scaled_data
+    
+    def split_data(self, data, ratio):
+        self.training_data_len = int(np.ceil(len(data) * ratio))
+        self.train_data = data[0: int(self.training_data_len), :]
+        self.x_train = []
+        self.y_train = []
+        for i in range(60, len(self.train_data)): 
+            self.x_train.append(self.train_data[i-60:i,0])
+            self.y_train.append(self.train_data[i,0])
 
-# モデルの学習
-model = make_pipeline(StandardScaler(), MultiOutputRegressor(SGDRegressor(max_iter=1000, tol=1e-3)))
-model.fit(X, y)
+        self.x_train, self.y_train = np.array(self.x_train), np.array(self.y_train)
+        self.x_train = np.reshape(self.x_train,(self.x_train.shape[0], self.x_train.shape[1], 1))
+        
+        self.train = self.data[:self.training_data_len]
+        self.vaild = self.data[self.training_data_len:]
 
-# 予測
-next_date = dt_now + datetime.timedelta(days=1)
-predict_df = pd.DataFrame({
-    'year': [next_date.year],
-    'month': [next_date.month],
-    'day': [next_date.day]
-})
-predicted_price = model.predict(predict_df)
+        return self.x_train, self.y_train, self.train, self.vaild
+    
+    def train_model(self, x_train, y_train):
+        self.x_train = x_train
+        self.y_train = y_train
+        self.model = Sequential()
+        self.model.add(LSTM(50, return_sequences=True, input_shape=(self.x_train.shape[1], 1)))
+        self.model.add(LSTM(50, return_sequences=False))
+        self.model.add(Dense(25))
+        self.model.add(Dense(1))
+        
+        self.model.compile(optimizer='adam', loss='mean_squared_error')
+        self.model.fit(self.x_train, self.y_train, batch_size=1, epochs=1)
+        
+        return self.model
 
-# 予測結果の出力
-print(f"Predicted prices for {next_date.strftime('%Y-%m-%d')}: Open={predicted_price[0][0]}, High={predicted_price[0][1]}, Low={predicted_price[0][2]}, Close={predicted_price[0][3]}")
 
-# 予測結果の可視化
-plt.figure(figsize=(12, 6))
-plt.plot(df['date'], df['Open'], label='Open')
-plt.plot(df['date'], df['High'], label='High')
-plt.plot(df['date'], df['Low'], label='Low')
-plt.plot(df['date'], df['Close'], label='Close')
-
-# 予測データの追加
-plt.scatter(next_date, predicted_price[0][0], color='red', label='Predicted Open', zorder=5)
-plt.scatter(next_date, predicted_price[0][1], color='red', label='Predicted High', zorder=5)
-plt.scatter(next_date, predicted_price[0][2], color='red', label='Predicted Low', zorder=5)
-plt.scatter(next_date, predicted_price[0][3], color='red', label='Predicted Close', zorder=5)
-
-plt.title(f"Stock Prices for {stock_code}")
-plt.xlabel("Date")
-plt.ylabel("Price")
-plt.legend()
-plt.grid(True)
-plt.show()
+finance = Finance()
+stock_code = st.text_input('Enter stock code')
+data = finance.get_data(stock_code)
+data = finance.normalize_data(data)
+x_train, y_train = finance.split_data(data, 0.7)
+model = finance.train_model(x_train, y_train)
