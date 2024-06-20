@@ -30,16 +30,8 @@ class Finance:
         self.data = self.df.filter(['Close'])
         self.dataset = self.data.values
         
-        return self.dataset
-
-    def plot_data(self, x, y, title, xlabel, ylabel, save_path):
-        plt.figure(figsize=(16,6))
-        plt.title(title)
-        plt.plot(x, y)
-        plt.xlabel(xlabel, fontsize=18)
-        plt.ylabel(ylabel, fontsize=18)
-        plt.savefig(save_path)
-        
+        return self.data, self.dataset
+    
     def normalize_data(self, data):
         self.scaler = MinMaxScaler(feature_range=(0,1))
         self.scaled_data = self.scaler.fit_transform(data)
@@ -76,11 +68,28 @@ class Finance:
         self.model.fit(self.x_train, self.y_train, batch_size=1, epochs=1)
         
         return self.model
+    
+class Plot:
+    def __init__(self):
+        pass
+    
+    def save_plot_data(self, x, y, title, xlabel, ylabel, save_path):
+        plt.figure(figsize=(16,6))
+        plt.title(title)
+        plt.plot(x)
+        plt.xlabel(xlabel, fontsize=18)
+        plt.ylabel(ylabel, fontsize=18)
+        plt.savefig(save_path)
+    
+    def streamlit_plot(self, data):
+        st.line_chart(data)
 
-
+st.title("株価予測アプリ")
 finance = Finance()
-stock_code = st.text_input('Enter stock code')
-data = finance.get_data(stock_code)
-data = finance.normalize_data(data)
-x_train, y_train = finance.split_data(data, 0.7)
-model = finance.train_model(x_train, y_train)
+plot = Plot()
+stock_code = st.text_input('stockコードを入力してください')
+if stock_code == '':
+    pass
+else:
+    data, dataset = finance.get_data(stock_code)
+    plot.streamlit_plot(data)
