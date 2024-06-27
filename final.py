@@ -8,88 +8,107 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
 from sklearn.metrics import mean_squared_error
-import os
-import streamlit as st 
+import streamlit as st
 
-
-class Finance:
-    def __init__(self):
-        pass
+class DataLoader:
+    def __init__(self, stock_code):
+        self.stock_code = stock_code
     
     def _get_time(self):
-        self.dt_now = datetime.now()
-        self.end = self.dt_now.strftime('%Y-%m-%d')
-        self.start_day = self.dt_now - timedelta(days=1095)
-        self.start = self.start_day.strftime('%Y-%m-%d')
-        
-        return self.start, self.end
+        dt_now = datetime.now()
+        end = dt_now.strftime('%Y-%m-%d')
+        start_day = dt_now - timedelta(days=1095)
+        start = start_day.strftime('%Y-%m-%d')
+        return start, end
+    
+    def get_data(self):
+        start, end = self._get_time()
+        df = yf.download(self.stock_code, start=start, end=end, interval='1d')
+        data = df.filter(['Close'])
+        dataset = data.values
+        return data, dataset
 
-    def get_data(self, stock_code):
-        self.start_day, self.end_day = self._get_time()
-        self.df = yf.download(stock_code, start=self.start_day, end=self.end_day, interval='1d')
-        self.data = self.df.filter(['Close'])
-        self.dataset = self.data.values
-        
-        return self.data, self.dataset
+class ModelTrainer:
+    def __init__(self):
+        self.scaler = MinMaxScaler(feature_range=(0,1))
     
     def normalize_data(self, data):
-        self.scaler = MinMaxScaler(feature_range=(0,1))
-        self.scaled_data = self.scaler.fit_transform(data)
-        
-        return self.scaled_data
+        return self.scaler.fit_transform(data)
     
-    def split_data(self, data, ratio):
-        self.training_data_len = int(np.ceil(len(data) * ratio))
-        self.train_data = data[0: int(self.training_data_len), :]
-        self.x_train = []
-        self.y_train = []
-        for i in range(60, len(self.train_data)): 
-            self.x_train.append(self.train_data[i-60:i,0])
-            self.y_train.append(self.train_data[i,0])
-
-        self.x_train, self.y_train = np.array(self.x_train), np.array(self.y_train)
-        self.x_train = np.reshape(self.x_train,(self.x_train.shape[0], self.x_train.shape[1], 1))
-        
-        self.train = self.data[:self.training_data_len]
-        self.vaild = self.data[self.training_data_len:]
-
-        return self.x_train, self.y_train, self.train, self.vaild
+    def split_data(self, data, ratio=0.7):
+        training_data_len = int(np.ceil(len(data) * ratio))
+        train_data = data[0: training_data_len, :]
+        x_train, y_train = [], []
+        for i in range(60, len(train_data)):
+            x_train.append(train_data[i-60:i, 0])
+            y_train.append(train_data[i, 0])
+        x_train, y_train = np.array(x_train), np.array(y_train)
+        x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+        return x_train, y_train, training_data_len
     
     def train_model(self, x_train, y_train):
-        self.x_train = x_train
-        self.y_train = y_train
-        self.model = Sequential()
-        self.model.add(LSTM(50, return_sequences=True, input_shape=(self.x_train.shape[1], 1)))
-        self.model.add(LSTM(50, return_sequences=False))
-        self.model.add(Dense(25))
-        self.model.add(Dense(1))
-        
-        self.model.compile(optimizer='adam', loss='mean_squared_error')
-        self.model.fit(self.x_train, self.y_train, batch_size=1, epochs=1)
-        
-        return self.model
+        model = Sequential()
+        model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+        model.add(LSTM(50, return_sequences=False))
+        model.add(Dense(25))
+        model.add(Dense(1))
+        model.compile(optimizer='adam', loss='mean_squared_error')
+        model.fit(x_train, y_train, batch_size=1, epochs=1)
+        return model
     
-class Plot:
-    def __init__(self):
-        pass
-    
-    def save_plot_data(self, x, y, title, xlabel, ylabel, save_path):
-        plt.figure(figsize=(16,6))
-        plt.title(title)
-        plt.plot(x)
-        plt.xlabel(xlabel, fontsize=18)
-        plt.ylabel(ylabel, fontsize=18)
-        plt.savefig(save_path)
-    
-    def streamlit_plot(self, data):
-        st.line_chart(data)
+    def make_predictions(self, model, data, training_data_len):
+        test_data = data[training_data_len - 60:, :]
+        x_test = []
+        for i in range(60, len(test_data)):
+            x_test.append(test_data[i-60:i, 0])
+        x_test = np.array(x_test)
+        x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+        predictions = model.predict(x_test)
+        predictions = self.scaler.inverse_transform(predictions)
+        return predictions
 
-st.title("株価予測アプリ")
-finance = Finance()
-plot = Plot()
-stock_code = st.text_input('stockコードを入力してください')
-if stock_code == '':
-    pass
-else:
-    data, dataset = finance.get_data(stock_code)
-    plot.streamlit_plot(data)
+class Plotter:
+    @staticmethod
+    def plot_data_with_predictions(train, valid, predictions):
+        plt.figure(figsize=(16, 6))
+        plt.title('LSTM Model')
+        plt.xlabel('Date', fontsize=18)
+        plt.ylabel('Close Price', fontsize=18)
+        plt.plot(train['Close'], label='Train')
+        plt.plot(valid['Close'], label='Real')
+        plt.plot(valid.index, predictions, label='Prediction', color='red')
+        plt.legend(['Train', 'Real', 'Prediction'], loc='lower right')
+        st.pyplot(plt)
+
+    @staticmethod
+    def plot_data_with_streamlit(valid):
+        st.line_chart(valid)
+
+class StreamlitApp:
+    def __init__(self):
+        self.data_loader = None
+        self.model_trainer = ModelTrainer()
+        self.plotter = Plotter()
+    
+    def run(self):
+        st.title("株価予測アプリ")
+        stock_code = st.text_input('stockコードを入力してください')
+        if stock_code:
+            self.data_loader = DataLoader(stock_code)
+            data, dataset = self.data_loader.get_data()
+            st.line_chart(data)
+            
+            scaled_data = self.model_trainer.normalize_data(dataset)
+            x_train, y_train, training_data_len = self.model_trainer.split_data(scaled_data)
+            if st.button('モデルを訓練'):
+                model = self.model_trainer.train_model(x_train, y_train)
+                predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
+                train = data[:training_data_len]
+                valid = data[training_data_len:]
+                valid['Predictions'] = predictions
+                self.plotter.plot_data_with_predictions(train, valid, predictions)
+                self.plotter.plot_data_with_streamlit(valid)
+
+if __name__ == "__main__":
+    app = StreamlitApp()
+    app.run()
