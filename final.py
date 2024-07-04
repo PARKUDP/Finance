@@ -96,13 +96,15 @@ class StreamlitApp:
         if stock_code:
             self.data_loader = DataLoader(stock_code)
             data, dataset = self.data_loader.get_data()
+            st.markdown('### 3年間の株価データ')
             st.line_chart(data)
             
             scaled_data = self.model_trainer.normalize_data(dataset)
             x_train, y_train, training_data_len = self.model_trainer.split_data(scaled_data)
             if st.button('モデルを訓練'):
-                model = self.model_trainer.train_model(x_train, y_train)
-                predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
+                with st.spinner('モデルを訓練中...'):
+                    model = self.model_trainer.train_model(x_train, y_train)
+                    predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
                 train = data[:training_data_len]
                 valid = data[training_data_len:]
                 valid['Predictions'] = predictions
