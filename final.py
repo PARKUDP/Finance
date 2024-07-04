@@ -105,9 +105,11 @@ class StreamlitApp:
                 with st.spinner('モデルを訓練中...'):
                     model = self.model_trainer.train_model(x_train, y_train)
                     predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
+                
                 train = data[:training_data_len]
-                valid = data[training_data_len:]
-                valid['Predictions'] = predictions
+                valid = data[training_data_len:].copy()  # 明示的にコピーを作成
+                valid.loc[:, 'Predictions'] = predictions  # .locを使用して値を設定
+                
                 self.plotter.plot_data_with_predictions(train, valid, predictions)
                 self.plotter.plot_data_with_streamlit(valid)
 
