@@ -66,6 +66,17 @@ class ModelTrainer:
         predictions = model.predict(x_test)
         predictions = self.scaler.inverse_transform(predictions)
         return predictions
+    
+    def predict_future(self, model, last_data, days=90):
+        future_predictions = []
+        last_data = last_data[-60:]
+        for _ in range(days):
+            input_data = last_data.reshape((1, last_data.shape[0], 1))
+            pred = model.predict(input_data)
+            future_predictions.append(pred[0, 0])
+            last_data = np.append(last_data[1:], pred)
+        future_predictions = self.scaler.inverse_transform(np.array(future_predictions).reshape(-1, 1))
+        return future_predictions
 
 class Plotter:
     @staticmethod
@@ -115,6 +126,11 @@ class StreamlitApp:
                 
                 self.plotter.plot_data_with_predictions(train, valid, predictions)
                 self.plotter.plot_data_with_streamlit(valid)
+                
+                if st.button('3ヶ月後まで予測'):
+                    with st.spinner('予測中...'):
+                        future_predictions = self.model_trainer.predict_future(model, scaled_data, days=90)
+                    self.plotter.plot_future_predictions(data, future_predictions)
 
 if __name__ == "__main__":
     app = StreamlitApp()
