@@ -135,6 +135,8 @@ class StreamlitApp:
                 with st.spinner('モデルを訓練中...'):
                     model = self.model_trainer.train_model(x_train, y_train)
                     predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
+                    future_predictions = self.model_trainer.predict_future(model, scaled_data, days=90)
+                    
                 train = data[:training_data_len]
                 valid = data[training_data_len:].copy()
                 valid.loc[:, 'Predictions'] = predictions
@@ -145,12 +147,7 @@ class StreamlitApp:
                 
                 self.plotter.plot_data_with_predictions(train, valid, predictions)
                 self.plotter.plot_data_with_streamlit(valid)
-                
-                if st.button('3ヶ月後まで予測'):
-                    with st.spinner('予測中...'):
-                        future_predictions = self.model_trainer.predict_future(model, scaled_data, days=90)
-                    self.plotter.plot_future_predictions(data, future_predictions)
-                    self.plotter.plot_future_with_streamlit(data, future_predictions)
+                self.plotter.plot_future_with_streamlit(data, future_predictions)
 
 if __name__ == "__main__":
     app = StreamlitApp()
