@@ -53,7 +53,7 @@ class ModelTrainer:
         model.add(Dense(25))
         model.add(Dense(1))
         model.compile(optimizer='adam', loss='mean_squared_error')
-        model.fit(x_train, y_train, batch_size=1, epochs=20)
+        model.fit(x_train, y_train, batch_size=16, epochs=20)
         return model
     
     def make_predictions(self, model, data, training_data_len):
