@@ -48,12 +48,12 @@ class ModelTrainer:
     
     def train_model(self, x_train, y_train):
         model = Sequential()
-        model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
-        model.add(LSTM(50, return_sequences=False))
+        model.add(LSTM(128, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+        model.add(LSTM(64, return_sequences=False))
         model.add(Dense(25))
         model.add(Dense(1))
         model.compile(optimizer='adam', loss='mean_squared_error')
-        model.fit(x_train, y_train, batch_size=1, epochs=1)
+        model.fit(x_train, y_train, batch_size=1, epochs=20)
         return model
     
     def make_predictions(self, model, data, training_data_len):
@@ -108,6 +108,11 @@ class StreamlitApp:
                 train = data[:training_data_len]
                 valid = data[training_data_len:]
                 valid['Predictions'] = predictions
+                
+                # RMSEの計算
+                rmse = np.sqrt(mean_squared_error(valid['Close'], predictions))
+                st.write(f'予測精度 (RMSE): {rmse:.2f}')
+                
                 self.plotter.plot_data_with_predictions(train, valid, predictions)
                 self.plotter.plot_data_with_streamlit(valid)
 
