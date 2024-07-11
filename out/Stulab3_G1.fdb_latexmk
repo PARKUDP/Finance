@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1720673724 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1720673725
-  "out/Stulab3_G1.dvi" 1720673724 13652 ffa09c555680a597a5ef4f90d4ca8139 "latex"
+["dvipdf"] 1720676138 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1720676138
+  "out/Stulab3_G1.dvi" 1720676137 13560 18598160f3b64dc7f9df1ff74a7cfbb9 "latex"
   (generated)
   "out/Stulab3_G1.pdf"
-["latex"] 1720673723 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1720673725
+["latex"] 1720676137 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1720676138
   "/etc/texmf/web2c/texmf.cnf" 1688377336 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/park/info3dm/final/Stulab3_G1.tex" 1720673723 7449 d47a0f8987f3e9be902616ee43e3dd52 ""
+  "/home/park/info3dm/final/Stulab3_G1.tex" 1720676137 7420 02a2a847119d47ae7258b774c5427e04 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -52,9 +52,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1710551286 2753914 de909386b02671767b3c17c031f4c3b7 ""
-  "Stulab3_G1.tex" 1720673723 7449 d47a0f8987f3e9be902616ee43e3dd52 ""
-  "out/Stulab3_G1.aux" 1720673724 1964 6000575ab815b2f16a134d499aa968aa "latex"
-  "out/Stulab3_G1.toc" 1720673724 1112 7fd04ab3a3e4605a84fd228d9e16c889 "latex"
+  "Stulab3_G1.tex" 1720676137 7420 02a2a847119d47ae7258b774c5427e04 ""
+  "out/Stulab3_G1.aux" 1720676137 1964 6000575ab815b2f16a134d499aa968aa "latex"
+  "out/Stulab3_G1.toc" 1720676137 1112 7fd04ab3a3e4605a84fd228d9e16c889 "latex"
   (generated)
   "out/Stulab3_G1.aux"
   "out/Stulab3_G1.dvi"

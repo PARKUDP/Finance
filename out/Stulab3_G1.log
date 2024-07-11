@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  11 JUL 2024 13:55
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  11 JUL 2024 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -234,4 +234,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  55i,6n,62p,692b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (5 pages, 13652 bytes).
+Output written on out/Stulab3_G1.dvi (5 pages, 13560 bytes).
