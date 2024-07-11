@@ -102,14 +102,14 @@ class Plotter:
         plt.xlabel('Date', fontsize=18)
         plt.ylabel('Close Price', fontsize=18)
         plt.plot(data['Close'], label='Historical Data')
-        future_dates = pd.date_range(start=data.index[-1], periods=days+1, closed='right')
+        future_dates = pd.date_range(start=data.index[-1], periods=days+1, inclusive='right')
         plt.plot(future_dates, future_predictions, label='Future Predictions', color='red')
         plt.legend(['Historical Data', 'Future Predictions'], loc='lower right')
         st.pyplot(plt)
     
     @staticmethod
     def plot_future_with_streamlit(data, future_predictions, days=90):
-        future_dates = pd.date_range(start=data.index[-1], periods=days+1, closed='right')
+        future_dates = pd.date_range(start=data.index[-1], periods=days+1, inclusive='right')
         future_df = pd.DataFrame(future_predictions, index=future_dates, columns=['Close'])
         combined_df = pd.concat([data, future_df])
         st.line_chart(combined_df)
