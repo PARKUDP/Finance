@@ -17,7 +17,7 @@ start_day = dt_now - timedelta(days=1095)
 start = start_day.strftime('%Y-%m-%d')
 
 # 株価データの取得
-stock_code = "1321.T"
+stock_code = "coke"
 df = yf.download(stock_code, start=start, end=end, interval='1d')
 
 data = df.filter(["Open", "High", "Low", "Close"])

@@ -9,6 +9,7 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM
 from sklearn.metrics import mean_squared_error
 import streamlit as st
+import os
 
 class DataLoader:
     def __init__(self, stock_code):
@@ -46,14 +47,14 @@ class ModelTrainer:
         x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
         return x_train, y_train, training_data_len
     
-    def train_model(self, x_train, y_train):
+    def train_model(self, x_train, y_train, epochs=20):
         model = Sequential()
         model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
         model.add(LSTM(50, return_sequences=False))
         model.add(Dense(25))
         model.add(Dense(1))
         model.compile(optimizer='adam', loss='mean_squared_error')
-        model.fit(x_train, y_train, batch_size=1, epochs=1)
+        model.fit(x_train, y_train, batch_size=1, epochs=epochs)
         return model
     
     def make_predictions(self, model, data, training_data_len):
@@ -103,7 +104,7 @@ class StreamlitApp:
             x_train, y_train, training_data_len = self.model_trainer.split_data(scaled_data)
             if st.button('モデルを訓練'):
                 with st.spinner('モデルを訓練中...'):
-                    model = self.model_trainer.train_model(x_train, y_train)
+                    model = self.model_trainer.train_model(x_train, y_train, epochs=20)
                     predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
                 
                 train = data[:training_data_len]
