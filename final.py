@@ -106,6 +106,13 @@ class Plotter:
         plt.plot(future_dates, future_predictions, label='Future Predictions', color='red')
         plt.legend(['Historical Data', 'Future Predictions'], loc='lower right')
         st.pyplot(plt)
+    
+    @staticmethod
+    def plot_future_with_streamlit(data, future_predictions, days=90):
+        future_dates = pd.date_range(start=data.index[-1], periods=days+1, closed='right')
+        future_df = pd.DataFrame(future_predictions, index=future_dates, columns=['Close'])
+        combined_df = pd.concat([data, future_df])
+        st.line_chart(combined_df)
 
 class StreamlitApp:
     def __init__(self):
@@ -143,6 +150,7 @@ class StreamlitApp:
                     with st.spinner('予測中...'):
                         future_predictions = self.model_trainer.predict_future(model, scaled_data, days=90)
                     self.plotter.plot_future_predictions(data, future_predictions)
+                    self.plotter.plot_future_with_streamlit(data, future_predictions)
 
 if __name__ == "__main__":
     app = StreamlitApp()
