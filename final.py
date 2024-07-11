@@ -94,6 +94,18 @@ class Plotter:
     @staticmethod
     def plot_data_with_streamlit(valid):
         st.line_chart(valid)
+    
+    @staticmethod
+    def plot_future_predictions(data, future_predictions, days=90):
+        plt.figure(figsize=(16, 6))
+        plt.title('Future Predictions')
+        plt.xlabel('Date', fontsize=18)
+        plt.ylabel('Close Price', fontsize=18)
+        plt.plot(data['Close'], label='Historical Data')
+        future_dates = pd.date_range(start=data.index[-1], periods=days+1, closed='right')
+        plt.plot(future_dates, future_predictions, label='Future Predictions', color='red')
+        plt.legend(['Historical Data', 'Future Predictions'], loc='lower right')
+        st.pyplot(plt)
 
 class StreamlitApp:
     def __init__(self):
@@ -117,8 +129,8 @@ class StreamlitApp:
                     model = self.model_trainer.train_model(x_train, y_train)
                     predictions = self.model_trainer.make_predictions(model, scaled_data, training_data_len)
                 train = data[:training_data_len]
-                valid = data[training_data_len:]
-                valid['Predictions'] = predictions
+                valid = data[training_data_len:].copy()
+                valid.loc[:, 'Predictions'] = predictions
                 
                 # RMSEの計算
                 rmse = np.sqrt(mean_squared_error(valid['Close'], predictions))
