@@ -2,17 +2,17 @@
 \contentsline {subsection}{\numberline {1.1}実験の目的と達成目標}{2}{}%
 \contentsline {subsection}{\numberline {1.2}テーマ: 株価予測とは}{2}{}%
 \contentsline {section}{\numberline {2}実験方法}{2}{}%
-\contentsline {subsection}{\numberline {2.1}実験目的}{2}{}%
-\contentsline {subsection}{\numberline {2.2}データセット構築}{2}{}%
+\contentsline {subsection}{\numberline {2.1}実験目的}{3}{}%
+\contentsline {subsection}{\numberline {2.2}データセット構築}{3}{}%
 \contentsline {subsection}{\numberline {2.3}モデル選定}{3}{}%
 \contentsline {subsection}{\numberline {2.4}パラメータ調整}{3}{}%
-\contentsline {paragraph}{エポック数}{3}{}%
-\contentsline {paragraph}{バッチサイズ}{3}{}%
-\contentsline {paragraph}{LSTMユニット数}{3}{}%
-\contentsline {paragraph}{Dense層}{3}{}%
-\contentsline {paragraph}{学習率}{3}{}%
-\contentsline {paragraph}{データの正規化}{4}{}%
-\contentsline {section}{\numberline {3}実験結果}{4}{}%
-\contentsline {section}{\numberline {4}考察}{4}{}%
-\contentsline {section}{\numberline {5}意図していた実験計画との違い}{4}{}%
-\contentsline {section}{\numberline {6}まとめ}{4}{}%
+\contentsline {paragraph}{エポック数}{6}{}%
+\contentsline {paragraph}{バッチサイズ}{6}{}%
+\contentsline {paragraph}{LSTMユニット数}{6}{}%
+\contentsline {paragraph}{Dense層}{6}{}%
+\contentsline {paragraph}{学習率}{6}{}%
+\contentsline {paragraph}{データの正規化}{7}{}%
+\contentsline {section}{\numberline {3}実験結果}{7}{}%
+\contentsline {section}{\numberline {4}考察}{7}{}%
+\contentsline {section}{\numberline {5}意図していDense層は、LSTM層の出力を線形変換し、最終的な予測値を生成する。本実験では、LSTM層の後に2つのDense層を追加し、最終的な出力層のユニット数を1に設定した。これにより、時系列データの特徴を捉えた後、適切な予測値を生成することが可能となった。実験計画との違い}{7}{}%
+\contentsline {section}{\numberline {6}まとめ}{7}{}%
