@@ -47,7 +47,7 @@ training_data_len = int(np.ceil(len(dataset) * 0.7))
 
 train_data = scaled_data[0: int(training_data_len), :]
 
-#訓練データの取得
+# 訓練データの取得
 x_train = []
 y_train = []
 for i in range(60, len(train_data)): 
@@ -58,7 +58,7 @@ for i in range(60, len(train_data)):
 x_train, y_train = np.array(x_train), np.array(y_train)
 x_train = np.reshape(x_train,(x_train.shape[0], x_train.shape[1], 1))
 
-#LSTMモデル構築
+# LSTMモデル構築
 model = Sequential()
 model.add(LSTM(128, return_sequences=True, input_shape=(x_train.shape[1], 1)))
 model.add(LSTM(64, return_sequences=False))
@@ -66,7 +66,7 @@ model.add(Dense(25))
 model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-#訓練用モデル構築
+# 訓練用モデル構築
 model.fit(x_train, y_train, batch_size=16, epochs=20)
 
 # 検証用データを取得とデータ変換
@@ -89,8 +89,8 @@ test_score = np.sqrt(mean_squared_error(y_test, predictions))
 print('Test Score: %.2f RMSE' % (test_score))
 
 train = data[: training_data_len]
-valid = data[training_data_len:]
-valid['Predictions'] = predictions
+valid = data[training_data_len:].copy()  
+valid.loc[:, 'Predictions'] = predictions
 
 plt.figure(figsize=(16,6))
 plt.title('LSTM Model')
