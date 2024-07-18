@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1721283348 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1721283349
-  "out/Stulab3_G1.dvi" 1721283348 27156 07bd859bdc2d8943dd3c201c0ee37e5c "latex"
+["dvipdf"] 1721283910 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1721283911
+  "out/Stulab3_G1.dvi" 1721283910 29588 28d0d6594571a3b741db7ea77f88c4f5 "latex"
   (generated)
   "out/Stulab3_G1.pdf"
-["latex"] 1721283347 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1721283349
+["latex"] 1721283909 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1721283911
   "/etc/texmf/web2c/texmf.cnf" 1688377336 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/park/info3dm/final/Stulab3_G1.tex" 1721283347 11719 c89c2b630bf250c94c8d707c0fd24016 ""
+  "/home/park/info3dm/final/Stulab3_G1.tex" 1721283909 13721 552d113e19aa774d966668fa435eef58 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -55,10 +55,10 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1710551286 2753914 de909386b02671767b3c17c031f4c3b7 ""
-  "Stulab3_G1.tex" 1721283347 11719 c89c2b630bf250c94c8d707c0fd24016 ""
+  "Stulab3_G1.tex" 1721283909 13721 552d113e19aa774d966668fa435eef58 ""
   "exericise/image/lstm_model.png" 1721281338 81357 12f57577d93acedd34e2bf207247cc5e ""
-  "out/Stulab3_G1.aux" 1721283348 2788 b3ce293923c10b19be7a7e07a3573f7f "latex"
-  "out/Stulab3_G1.toc" 1721283348 1112 a5b5b8958aa42b9cd47e4cec1d3cdfa6 "latex"
+  "out/Stulab3_G1.aux" 1721283910 2788 b3ce293923c10b19be7a7e07a3573f7f "latex"
+  "out/Stulab3_G1.toc" 1721283910 1112 a5b5b8958aa42b9cd47e4cec1d3cdfa6 "latex"
   "parameter/four.txt" 1721278787 117 ad2b5772767f4b8243b817d1e911884c ""
   "parameter/one.txt" 1721278669 262 34b0dcd355c75740de6b6a0ad196327f ""
   "parameter/three.txt" 1721278789 108 ac58a9bffd22748898a897d5ea0bdc86 ""
