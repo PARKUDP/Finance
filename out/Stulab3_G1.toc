@@ -14,5 +14,5 @@
 \contentsline {paragraph}{データの正規化}{7}{}%
 \contentsline {section}{\numberline {3}実験結果}{7}{}%
 \contentsline {section}{\numberline {4}考察}{7}{}%
-\contentsline {section}{\numberline {5}意図していた実験計画との違い}{7}{}%
-\contentsline {section}{\numberline {6}まとめ}{7}{}%
+\contentsline {section}{\numberline {5}意図していた実験計画との違い}{8}{}%
+\contentsline {section}{\numberline {6}まとめ}{8}{}%
