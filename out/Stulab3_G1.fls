@@ -285,5 +285,9 @@ INPUT ./parameter/four.txt
 INPUT ./parameter/four.txt
 INPUT ./parameter/four.txt
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT ./exericise/image/lstm_model.png
+INPUT ./exericise/image/lstm_model.png
+INPUT ./exericise/image/lstm_model.png
+INPUT extractbb -B cropbox -O ./exericise/image/lstm_model.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT out/Stulab3_G1.aux

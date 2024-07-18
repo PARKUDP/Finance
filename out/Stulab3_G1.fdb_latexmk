@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1721279096 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1721279096
-  "out/Stulab3_G1.dvi" 1721279096 25344 35acc445681787fa1efc780f4d69be89 "latex"
+["dvipdf"] 1721280152 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1721280153
+  "out/Stulab3_G1.dvi" 1721280152 24880 95636977923c267940c9483c78bf7f18 "latex"
   (generated)
   "out/Stulab3_G1.pdf"
-["latex"] 1721279095 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1721279096
+["latex"] 1721280151 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1721280153
   "/etc/texmf/web2c/texmf.cnf" 1688377336 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/park/info3dm/final/Stulab3_G1.tex" 1721279094 10005 ea3b5775a3a2fec5bc2c07b59219beba ""
+  "/home/park/info3dm/final/Stulab3_G1.tex" 1721280150 9953 247ef6e6248a590a592f5303d60a2f1d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -55,9 +55,10 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1710551286 2753914 de909386b02671767b3c17c031f4c3b7 ""
-  "Stulab3_G1.tex" 1721279094 10005 ea3b5775a3a2fec5bc2c07b59219beba ""
-  "out/Stulab3_G1.aux" 1721279096 2955 a3c2533455da49994e76b683e837589e "latex"
-  "out/Stulab3_G1.toc" 1721279096 1450 d736a2a5645ed63866691b4486dc5bc4 "latex"
+  "Stulab3_G1.tex" 1721280150 9953 247ef6e6248a590a592f5303d60a2f1d ""
+  "exericise/image/lstm_model.png" 1721279427 79954 37165f502f752ae96d3be9020964025d ""
+  "out/Stulab3_G1.aux" 1721280152 2788 8b62af7b6beaa5e30aae12cebf048f29 "latex"
+  "out/Stulab3_G1.toc" 1721280152 1112 4c4a318678cdaf9f96eba1fba67706fb "latex"
   "parameter/four.txt" 1721278787 117 ad2b5772767f4b8243b817d1e911884c ""
   "parameter/one.txt" 1721278669 262 34b0dcd355c75740de6b6a0ad196327f ""
   "parameter/three.txt" 1721278789 108 ac58a9bffd22748898a897d5ea0bdc86 ""
