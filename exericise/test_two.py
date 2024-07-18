@@ -67,7 +67,7 @@ model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
 #訓練用モデル構築
-model.fit(x_train, y_train, batch_size=1, epochs=20)
+model.fit(x_train, y_train, batch_size=16, epochs=20)
 
 # 検証用データを取得とデータ変換
 test_data = scaled_data[training_data_len - 60: , :]
