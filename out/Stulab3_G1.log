@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  25 JUL 2024 15:48
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  25 JUL 2024 15:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -247,9 +247,9 @@ File: ./exericise/image/lstm_model.png Graphic file (type bmp)
 [7]
 File: ./image/image.png Graphic file (type bmp)
 <./image/image.png>
-[8] [9] [10
+[8] [9
 
-] [11] (out/Stulab3_G1.aux)
+] [10] (out/Stulab3_G1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -263,4 +263,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  55i,6n,62p,692b,1722s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (12 pages, 32176 bytes).
+Output written on out/Stulab3_G1.dvi (11 pages, 32012 bytes).

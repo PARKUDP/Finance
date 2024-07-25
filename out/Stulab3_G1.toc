@@ -14,6 +14,6 @@
 \contentsline {paragraph}{データの正規化}{7}{}%
 \contentsline {section}{\numberline {3}実験結果}{7}{}%
 \contentsline {paragraph}{WebページのURL：}{7}{}%
-\contentsline {section}{\numberline {4}考察}{10}{}%
-\contentsline {section}{\numberline {5}意図していた実験計画との違い}{10}{}%
-\contentsline {section}{\numberline {6}まとめ}{10}{}%
+\contentsline {section}{\numberline {4}考察}{9}{}%
+\contentsline {section}{\numberline {5}意図していた実験計画との違い}{9}{}%
+\contentsline {section}{\numberline {6}まとめ}{9}{}%
