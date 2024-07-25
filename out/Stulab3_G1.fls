@@ -290,4 +290,8 @@ INPUT ./exericise/image/lstm_model.png
 INPUT ./exericise/image/lstm_model.png
 INPUT extractbb -B cropbox -O ./exericise/image/lstm_model.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./image/image.png
+INPUT ./image/image.png
+INPUT ./image/image.png
+INPUT extractbb -B cropbox -O ./image/image.png
 INPUT out/Stulab3_G1.aux
