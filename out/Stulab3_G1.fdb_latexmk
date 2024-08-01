@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1722494126 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1722494127
-  "out/Stulab3_G1.dvi" 1722494126 74548 fd7b9fd07cd6e393e86a7a5b29a4c775 "latex"
+["dvipdf"] 1722494271 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1722494272
+  "out/Stulab3_G1.dvi" 1722494271 58000 332cca8985dc59f0e9632db9f9d62ca3 "latex"
   (generated)
   "out/Stulab3_G1.pdf"
-["latex"] 1722494124 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1722494127
+["latex"] 1722494269 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1722494272
   "/etc/texmf/web2c/texmf.cnf" 1688377336 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/park/info3dm/final/Stulab3_G1.tex" 1722494124 19808 9a07fe98db3dffedbca78d6e45d109fe ""
+  "/home/park/info3dm/final/Stulab3_G1.tex" 1722494268 19860 dacab52c41713d270bdbe3e542944354 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -64,12 +64,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1622581934 2671 4de6781a30211fe0ea4c672e4a2a8166 ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty" 1636758526 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty" 1580250785 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
-  "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def" 1623096352 3762 6e233fe5b9022e42a52703f9014ccd08 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvipdfm.def" 1623096352 43493 0a958ee873720b28d96f7e877a5d04ca ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def" 1623096352 1777 940b1aa83773bc035eb882e8d6842769 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty" 1623096352 230915 97a8817f13de4e61bbc3592cb2caa995 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty" 1612734870 13242 133e617c5eebffdd05e421624022b267 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def" 1623096352 14132 c9404e8e78123ef0d1007c34d1d6da51 ""
-  "/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def" 1623096352 49316 7f8f4e191058e83701a011ea5e68b1ab ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def" 1623096352 117004 86586f287ddfad919a0a4bd68934277a ""
   "/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1602274869 22521 d2fceb764a442a2001d257ef11db7618 ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1642022539 35666 245843706ef8bde3dc5fcca41b43ec1e ""
@@ -85,13 +84,13 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1710551286 2753914 de909386b02671767b3c17c031f4c3b7 ""
-  "Stulab3_G1.tex" 1722494124 19808 9a07fe98db3dffedbca78d6e45d109fe ""
+  "Stulab3_G1.tex" 1722494268 19860 dacab52c41713d270bdbe3e542944354 ""
   "example/data_sample.txt" 1722489732 444 ed70cabd0e6077dac37e7835d28635bc ""
   "exericise/image/lstm_model.png" 1722492785 81658 ff4515217da6179d863e79eb805fb921 ""
   "image/image.png" 1721889748 65596 7baaa0f5ec724b599f72480f559c65fb ""
-  "out/Stulab3_G1.aux" 1722494126 4694 872aeb3190a8f199cf81863cb9515841 "latex"
-  "out/Stulab3_G1.out" 1722494126 707 720d27fb10521d5b4fff4dd0af2e7b1d "latex"
-  "out/Stulab3_G1.toc" 1722494126 1402 dbd19082250ce92062a89eb35f469b10 "latex"
+  "out/Stulab3_G1.aux" 1722494271 4694 872aeb3190a8f199cf81863cb9515841 "latex"
+  "out/Stulab3_G1.out" 1722494271 707 720d27fb10521d5b4fff4dd0af2e7b1d "latex"
+  "out/Stulab3_G1.toc" 1722494271 1402 dbd19082250ce92062a89eb35f469b10 "latex"
   "parameter/four.txt" 1721278787 117 ad2b5772767f4b8243b817d1e911884c ""
   "parameter/one.txt" 1721278669 262 34b0dcd355c75740de6b6a0ad196327f ""
   "parameter/three.txt" 1721278789 108 ac58a9bffd22748898a897d5ea0bdc86 ""

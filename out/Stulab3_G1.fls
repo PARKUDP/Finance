@@ -368,6 +368,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
@@ -420,14 +422,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
@@ -486,6 +484,7 @@ INPUT out/Stulab3_G1.aux
 INPUT out/Stulab3_G1.aux
 INPUT out/Stulab3_G1.aux
 OUTPUT out/Stulab3_G1.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
