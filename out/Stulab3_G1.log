@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  25 JUL 2024 15:52
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -226,20 +226,20 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 ] [3]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 49.
+(Font)              scaled to size 8.64899pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 49.
+(Font)              scaled to size 8.64899pt on input line 51.
 (./parameter/one.txt) (./parameter/two.txt [4]) (./parameter/three.txt [5]) (./parameter/four.txt)
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 56.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 56.
+(Font)              scaled to size 9.60999pt on input line 58.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 56.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 56.
+(Font)              scaled to size 9.60999pt on input line 58.
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 56.
+LaTeX Warning: Reference `' on page 6 undefined on input line 58.
 
 [6]
 File: ./exericise/image/lstm_model.png Graphic file (type bmp)
@@ -263,4 +263,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  55i,6n,62p,692b,1722s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (11 pages, 32012 bytes).
+Output written on out/Stulab3_G1.dvi (11 pages, 32548 bytes).

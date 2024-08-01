@@ -1,6 +1,7 @@
 \contentsline {section}{\numberline {1}はじめに}{2}{}%
 \contentsline {subsection}{\numberline {1.1}実験の目的と達成目標}{2}{}%
-\contentsline {subsection}{\numberline {1.2}テーマ: 株価予測とは}{2}{}%
+\contentsline {subsection}{\numberline {1.2}概要}{2}{}%
+\contentsline {subsection}{\numberline {1.3}テーマ: 株価予測とは}{2}{}%
 \contentsline {section}{\numberline {2}実験方法}{2}{}%
 \contentsline {subsection}{\numberline {2.1}実験目的}{3}{}%
 \contentsline {subsection}{\numberline {2.2}データセット構築}{3}{}%
