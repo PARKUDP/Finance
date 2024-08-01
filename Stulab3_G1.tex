@@ -42,7 +42,7 @@
 \subsection{モデル選定}
 \indent 本実験では、株価予測において有効であると判断したLSTM（Long Short-Term Memory）モデルを用いる。株価のデータが時系列データであるため、まずRNN（Recurrent Neural Network）とLSTMの二つのモデルを考慮した。それぞれのモデルには特性と利点があり、最適なモデルを選定するために比較検討を行った。\\
 \indent RNNは時間的な依存関係を学習するために設計されたモデルであるが、長期的な依存関係を学習する際に「消失勾配問題」という問題が発生する。これは、時間が経つにつれて勾配が消失し、学習が進まなくなる問題である。この問題により、RNNは長期間の依存関係を効果的に学習することが難しくなる。\\
-\indent この消失勾配問題に対処するために開発されたのがLSTMである。LSTMはRNNの構造に改良を加え、情報の流れを効果的に制御するためのゲート機構を導入している。具体的には、入力ゲート、忘却ゲート、出力ゲートの3つのゲートを使用し、重要な情報を保持し、不要な情報を忘却することができる。この設計により、LSTMは長期的な依存関係をよりよく学習することができ、株価のような複雑な時系列データに対しても高い予測性能を発揮する。\\
+\indent この勾配消失問題に対処するために開発されたのがLSTMである。LSTMはRNNの構造に改良を加え、情報の流れを効果的に制御するためのゲート機構を導入している。具体的には、入力ゲート、忘却ゲート、出力ゲートの3つのゲートを使用し、重要な情報を保持し、不要な情報を忘却することができる。この設計により、LSTMは長期的な依存関係をよりよく学習することができ、株価のような複雑な時系列データに対しても高い予測性能を発揮する。\\
 \indent したがって、LSTMはRNNに比べて長期的な依存関係を保持するのに優れており、株価予測のようなデータにおいて、より正確な予測を実現する可能性が高いと判断した。このため、本実験ではLSTMモデルを選定した。
 
 \subsection{パラメータ調整}
@@ -86,10 +86,10 @@
   \label{twopython}
 \end{figure}
 
-\indent また、実際にこのモデルとStreamlitを用いて、次のようなページを作成したものである。\\
+\indent また、実際にこのモデルとStreamlitを用いて、次のようなページを作成した。\\
 \paragraph{WebページのURL：}\url{https://finance-svkvjevmpsyc9f9ru8yefz.streamlit.app/} \\
 
-\indent 上記のページでは、図\ref{Streamlit}のように3年間の株価データを表示し、それを用いて株価を予測するグラフを表示できるものである。 \\
+\indent 上記のページでは、図\ref{Streamlit}のように3年間の株価データを表示し、それを用いて株価を予測するグラフを表示できる。 \\
 \indent 図\ref{twopython}には、訓練データ、実際のデータ、予測データの3つの線が示されている。青色の線は訓練データを表し、オレンジ色の線は実際のデータ、緑色の線はLSTMモデルによる予測データを示しているものである。軸ラベルはそれぞれ横軸が日付（Date）、縦軸が1321.Tの終値（Close Price of 1321.T）であり、縦軸の単位は円である。
 
 \begin{figure}[htbp]
@@ -113,12 +113,16 @@
 
 
 \begin{thebibliography}{99}
-  \bibitem{tech} 野村證券株式会社、証券用語解説集、テクニカル分析、\url{https://www.nomura.co.jp/terms/japan/te/tec_analysis.html}。
-  \bibitem{nikei} 日本取引所グループ、日経225上場投資信託 (1321) 、\url{https://www.jpx.co.jp/equities/products/etfs/issues/files/1321-j.pdf}。
-  \bibitem{yfin} yfinance API、\url{https://pypi.org/project/yfinance/}。
-  \bibitem{Sequential model} Kerasライブラリ、Sequential model、\url{https://keras.io/guides/sequential_model/}。
-  \bibitem{Dense layer} Kerasライブラリ、Dense layer、\url{https://keras.io/api/layers/core_layers/dense/}。
-  \bibitem{LSTM layer} Kerasライブラリ、LSTM layer、\url{https://keras.io/api/layers/recurrent_layers/lstm/}。
-  \bibitem{RMSD} IT用語辞典、二乗平均平方根誤差 【RMSE】、\url{https://e-words.jp/w/%E4%BA%8C%E4%B9%97%E5%B9%B3%E5%9D%87%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AA%A4%E5%B7%AE.html}
+  \bibitem{tech} 野村證券株式会社、証券用語解説集、テクニカル分析、（参照 2024-07-25）、\url{https://www.nomura.co.jp/terms/japan/te/tec_analysis.html}。
+  \bibitem{nikei} 日本取引所グループ、日経225上場投資信託 (1321) 、（参照 2024-07-25）、\url{https://www.jpx.co.jp/equities/products/etfs/issues/files/1321-j.pdf}。
+  \bibitem{yfin} yfinance API、（参照 2024-07-25）、\url{https://pypi.org/project/yfinance/}。
+  \bibitem{Sequential model} Kerasライブラリ、Sequential model、（参照 2024-07-25）、\url{https://keras.io/guides/sequential_model/}。
+  \bibitem{Dense layer} Kerasライブラリ、Dense layer、（参照 2024-07-25）、\url{https://keras.io/api/layers/core_layers/dense/}。
+  \bibitem{LSTM layer} Kerasライブラリ、LSTM layer、（参照 2024-07-25）、\url{https://keras.io/api/layers/recurrent_layers/lstm/}。
+  \bibitem{RMSD} IT用語辞典、二乗平均平方根誤差 【RMSE】、（参照 2024-07-25）、\url{https://e-words.jp/w/%E4%BA%8C%E4%B9%97%E5%B9%B3%E5%9D%87%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AA%A4%E5%B7%AE.html}
+  \bibitem{LSTM} AI総合研究所、LSTMとは？その仕組みや使用例をわかりやすく解説！、（参照 2024-07-25）、\url{https://www.ai-souken.com/article/lstm-overview}
+  \bibitem{RNN} 株式会社 日立ソリューションズ・クリエイト、自然言語処理に使われるRNN（リカレントニューラルネットワーク）とは？、（参照 2024-07-25）、\url{https://www.hitachi-solutions-create.co.jp/column/technology/rnn.html#:~:text=RNN%EF%BC%88%E3%83%AA%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%EF%BC%89%E3%81%A8%E3%81%AF,-RNN%E3%81%A8%E3%81%AF&text=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%A8%E3%81%AF%E3%80%81%E4%BA%BA%E9%96%93,%E3%81%A7%E5%AD%A6%E7%BF%92%E3%82%92%E8%A1%8C%E3%81%84%E3%81%BE%E3%81%99%E3%80%82}
+  \bibitem{RNNandLSTM} Creative Drive、"RNNとLSTM、それぞれの特性とは？違いを解説" .2023、(参照 2024-07-25)、\url{https://creative-drive.jp/media/2307}
+  \bibitem{AI} 株式会社VOST、“AI(人工知能)用語集” . DX/AI研 . 2023。(参照 2024-07-25)、\url{https://ai-kenkyujo.com/term/gradient-loss-problem/}
 \end{thebibliography}
 \end{document}

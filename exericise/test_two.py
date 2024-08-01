@@ -9,6 +9,7 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM
 from sklearn.metrics import mean_squared_error
 import os
+import japanize_matplotlib
 
 # 現在の日時を取得
 dt_now = datetime.now()
@@ -95,7 +96,7 @@ valid.loc[:, 'Predictions'] = predictions
 plt.figure(figsize=(16,6))
 plt.title('LSTM Model')
 plt.xlabel('Date', fontsize=18)
-plt.ylabel('Close Price of 1321.T', fontsize=18)
+plt.ylabel('Close Price of 1321.T（円）', fontsize=18)
 plt.plot(train['Close'])
 plt.plot(valid[['Close', 'Predictions']])
 plt.legend(['Train', 'Real', 'Prediction'], loc='lower right')
