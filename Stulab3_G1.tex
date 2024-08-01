@@ -38,7 +38,6 @@
 \subsection{データセット構築}
 \indent yfinance APIを用いて、1日あたりの株価データをそれぞれ取得する。取得したデータは、Open（始値）、High（高値）、Low（低値）、Close（終値）、Volume（取引量）、Dividends（配当金）、Stock Splits（株式分割）の 7つのカラムからなる（Date は除く）。また、取得したデータを元に、直近3年間の株価データを取得し、テクニカル分析を行うことができるデータセットを構築する。yfinanceAPIのURLは、参考文献 \cite{yfin}である。\\\\\\
 \indent また、Listing \ref{data}は1321.Tの直近5日間のデータを示しているものである。
-
 \lstinputlisting[numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=1321.Tの直近5日間のデータ, label=data]{./example/data_sample.txt}
 \subsection{モデル選定}
 \indent 本実験では、株価予測において有効であると判断したLSTM（Long Short-Term Memory）モデルを用いる。株価のデータが時系列データであるため、まずRNN（Recurrent Neural Network）とLSTMの二つのモデルを考慮した。それぞれのモデルには特性と利点があり、最適なモデルを選定するために比較検討を行った。\\
@@ -55,7 +54,6 @@
 
 \indent 上記のListing \ref{one}、Listing \ref{two}、Listing \ref{three}、Listing \ref{four}を通じて、エポック数は20~30が最適であることがわかった。また、バッチサイズは16が最適であることがわかった。よって、下記のようにパラメータを設定した。
 \paragraph{エポック数}
-\indent Listing \ref{}
 \indent モデルの訓練において、エポック数は重要なパラメータである。本実験では、エポック数を20に設定した。将来的には、エポック数を増やすことでモデルの収束状況や予測精度が向上する可能性があるため、さらに検討する予定である。
 
 \paragraph{バッチサイズ}
