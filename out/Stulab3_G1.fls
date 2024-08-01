@@ -259,11 +259,21 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT ./parameter/one.txt
-INPUT ./parameter/one.txt
+INPUT ./example/data_sample.txt
+INPUT ./example/data_sample.txt
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT ./example/data_sample.txt
+INPUT ./example/data_sample.txt
+INPUT ./example/data_sample.txt
+INPUT ./example/data_sample.txt
+INPUT ./parameter/one.txt
+INPUT ./parameter/one.txt
 INPUT ./parameter/one.txt
 INPUT ./parameter/one.txt
 INPUT ./parameter/one.txt
@@ -291,7 +301,6 @@ INPUT ./exericise/image/lstm_model.png
 INPUT ./exericise/image/lstm_model.png
 INPUT ./exericise/image/lstm_model.png
 INPUT extractbb -B cropbox -O ./exericise/image/lstm_model.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./image/image.png
 INPUT ./image/image.png
 INPUT ./image/image.png
