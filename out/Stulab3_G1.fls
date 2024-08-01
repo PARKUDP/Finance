@@ -296,7 +296,6 @@ INPUT ./parameter/four.txt
 INPUT ./parameter/four.txt
 INPUT ./parameter/four.txt
 INPUT ./parameter/four.txt
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT ./exericise/image/lstm_model.png
 INPUT ./exericise/image/lstm_model.png
 INPUT ./exericise/image/lstm_model.png

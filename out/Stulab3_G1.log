@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 14:24
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,44 +231,28 @@ LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 36.
 [3]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 42.
+(Font)              scaled to size 8.64899pt on input line 41.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 42.
+(Font)              scaled to size 8.64899pt on input line 41.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 42.
+(Font)              scaled to size 7.68799pt on input line 41.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 42.
-(./example/data_sample.txt) (./parameter/one.txt [4]) (./parameter/two.txt [5]) (./parameter/three.txt) (./parameter/four.txt [6])
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 58.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 58.
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 58.
-
-[7]
+(Font)              scaled to size 7.68799pt on input line 41.
+(./example/data_sample.txt) (./parameter/one.txt [4]) (./parameter/two.txt [5]) (./parameter/three.txt) (./parameter/four.txt [6]) [7]
 File: ./exericise/image/lstm_model.png Graphic file (type bmp)
 <./exericise/image/lstm_model.png>
 File: ./image/image.png Graphic file (type bmp)
 <./image/image.png>
 [8] [9] [10
 
-] [11] (out/Stulab3_G1.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] [11] (out/Stulab3_G1.aux) ) 
 Here is how much of TeX's memory you used:
- 3758 strings out of 478741
- 54125 string characters out of 5860982
+ 3753 strings out of 478741
+ 54074 string characters out of 5860982
  423047 words of memory out of 5000000
- 22145 multiletter control sequences out of 15000+600000
- 483252 words of font info for 94 fonts, out of 8000000 for 9000
+ 22141 multiletter control sequences out of 15000+600000
+ 482944 words of font info for 93 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  55i,8n,62p,811b,1722s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (12 pages, 38648 bytes).
+Output written on out/Stulab3_G1.dvi (12 pages, 38588 bytes).
