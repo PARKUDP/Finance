@@ -1,20 +1,19 @@
 \contentsline {section}{\numberline {1}はじめに}{2}{}%
-\contentsline {subsection}{\numberline {1.1}実験の目的と達成目標}{2}{}%
-\contentsline {subsection}{\numberline {1.2}概要}{2}{}%
-\contentsline {subsection}{\numberline {1.3}テーマ: 株価予測とは}{2}{}%
+\contentsline {subsection}{\numberline {1.1}概要}{2}{}%
+\contentsline {subsection}{\numberline {1.2}テーマ: 株価予測とは}{2}{}%
 \contentsline {section}{\numberline {2}実験方法}{2}{}%
 \contentsline {subsection}{\numberline {2.1}実験目的}{3}{}%
 \contentsline {subsection}{\numberline {2.2}データセット構築}{3}{}%
-\contentsline {subsection}{\numberline {2.3}モデル選定}{3}{}%
+\contentsline {subsection}{\numberline {2.3}モデル選定}{4}{}%
 \contentsline {subsection}{\numberline {2.4}パラメータ調整}{4}{}%
-\contentsline {paragraph}{エポック数}{6}{}%
-\contentsline {paragraph}{バッチサイズ}{6}{}%
+\contentsline {paragraph}{エポック数}{7}{}%
+\contentsline {paragraph}{バッチサイズ}{7}{}%
 \contentsline {paragraph}{LSTMユニット数}{7}{}%
 \contentsline {paragraph}{Dense層}{7}{}%
 \contentsline {paragraph}{学習率}{7}{}%
 \contentsline {paragraph}{データの正規化}{7}{}%
-\contentsline {section}{\numberline {3}実験結果}{7}{}%
-\contentsline {paragraph}{WebページのURL：}{7}{}%
-\contentsline {section}{\numberline {4}考察}{9}{}%
-\contentsline {section}{\numberline {5}意図していた実験計画との違い}{9}{}%
-\contentsline {section}{\numberline {6}まとめ}{9}{}%
+\contentsline {section}{\numberline {3}実験結果}{8}{}%
+\contentsline {paragraph}{WebページのURL：}{8}{}%
+\contentsline {section}{\numberline {4}考察}{10}{}%
+\contentsline {section}{\numberline {5}意図していた実験計画との違い}{10}{}%
+\contentsline {section}{\numberline {6}まとめ}{10}{}%
