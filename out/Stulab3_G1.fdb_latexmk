@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1722493964 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1722493965
-  "out/Stulab3_G1.dvi" 1722493963 74612 578c84375026fa663aae396bf5829b1e "latex"
+["dvipdf"] 1722494126 "out/Stulab3_G1.dvi" "out/Stulab3_G1.pdf" "out/Stulab3_G1" 1722494127
+  "out/Stulab3_G1.dvi" 1722494126 74548 fd7b9fd07cd6e393e86a7a5b29a4c775 "latex"
   (generated)
   "out/Stulab3_G1.pdf"
-["latex"] 1722493962 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1722493965
+["latex"] 1722494124 "/home/park/info3dm/final/Stulab3_G1.tex" "out/Stulab3_G1.dvi" "Stulab3_G1" 1722494127
   "/etc/texmf/web2c/texmf.cnf" 1688377336 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/park/info3dm/final/Stulab3_G1.tex" 1722493962 19802 93c97def4bd59c1a12b3513edc1d5d33 ""
+  "/home/park/info3dm/final/Stulab3_G1.tex" 1722494124 19808 9a07fe98db3dffedbca78d6e45d109fe ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -85,13 +85,13 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1710551286 2753914 de909386b02671767b3c17c031f4c3b7 ""
-  "Stulab3_G1.tex" 1722493962 19802 93c97def4bd59c1a12b3513edc1d5d33 ""
+  "Stulab3_G1.tex" 1722494124 19808 9a07fe98db3dffedbca78d6e45d109fe ""
   "example/data_sample.txt" 1722489732 444 ed70cabd0e6077dac37e7835d28635bc ""
   "exericise/image/lstm_model.png" 1722492785 81658 ff4515217da6179d863e79eb805fb921 ""
   "image/image.png" 1721889748 65596 7baaa0f5ec724b599f72480f559c65fb ""
-  "out/Stulab3_G1.aux" 1722493963 4694 872aeb3190a8f199cf81863cb9515841 "latex"
-  "out/Stulab3_G1.out" 1722493963 707 720d27fb10521d5b4fff4dd0af2e7b1d "latex"
-  "out/Stulab3_G1.toc" 1722493963 1402 dbd19082250ce92062a89eb35f469b10 "latex"
+  "out/Stulab3_G1.aux" 1722494126 4694 872aeb3190a8f199cf81863cb9515841 "latex"
+  "out/Stulab3_G1.out" 1722494126 707 720d27fb10521d5b4fff4dd0af2e7b1d "latex"
+  "out/Stulab3_G1.toc" 1722494126 1402 dbd19082250ce92062a89eb35f469b10 "latex"
   "parameter/four.txt" 1721278787 117 ad2b5772767f4b8243b817d1e911884c ""
   "parameter/one.txt" 1721278669 262 34b0dcd355c75740de6b6a0ad196327f ""
   "parameter/three.txt" 1721278789 108 ac58a9bffd22748898a897d5ea0bdc86 ""

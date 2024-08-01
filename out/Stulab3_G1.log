@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 15:32
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -373,19 +373,9 @@ File: ./exericise/image/lstm_model.png Graphic file (type bmp)
 [8]
 File: ./image/image.png Graphic file (type bmp)
 <./image/image.png>
-[9]
-Underfull \hbox (badness 2564) in paragraph at lines 116--117
-[]\JY1/mc/m/n/10 野村證券株式会社 、 証券用語解説集 、 テクニカル分析 、 （ 参照 \OT1/cmr/m/n/10 2024-07-25\JY1/mc/m/n/10 ） 、
- []
+[9] [10
 
-[10
-
-]
-Underfull \hbox (badness 2726) in paragraph at lines 117--118
-[]\JY1/mc/m/n/10 日本取引所グル ープ 、 日経 \OT1/cmr/m/n/10 225 \JY1/mc/m/n/10 上場投資信託 \OT1/cmr/m/n/10 (1321) \JY1/mc/m/n/10 、 （ 参照 \OT1/cmr/m/n/10 2024-07-25\JY1/mc/m/n/10 ） 、
- []
-
-[11] (out/Stulab3_G1.aux)
+] [11] (out/Stulab3_G1.aux)
 Package rerunfilecheck Info: File `Stulab3_G1.out' has not changed.
 (rerunfilecheck)             Checksum: 720D27FB10521D5B4FFF4DD0AF2E7B1D;707.
  ) 
@@ -398,4 +388,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  65i,8n,67p,813b,1883s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (12 pages, 74612 bytes).
+Output written on out/Stulab3_G1.dvi (12 pages, 74548 bytes).
