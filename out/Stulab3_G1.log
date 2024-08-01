@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 14:27
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2024.3.16)  1 AUG 2024 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -238,21 +238,22 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 41.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 41.
-(./example/data_sample.txt) (./parameter/one.txt [4]) (./parameter/two.txt [5]) (./parameter/three.txt) (./parameter/four.txt [6]) [7]
+(./example/data_sample.txt) [4] (./parameter/one.txt [5]) (./parameter/two.txt [6]) (./parameter/three.txt) (./parameter/four.txt [7])
 File: ./exericise/image/lstm_model.png Graphic file (type bmp)
 <./exericise/image/lstm_model.png>
+[8]
 File: ./image/image.png Graphic file (type bmp)
 <./image/image.png>
-[8] [9] [10
+[9] [10
 
 ] [11] (out/Stulab3_G1.aux) ) 
 Here is how much of TeX's memory you used:
- 3753 strings out of 478741
- 54074 string characters out of 5860982
- 423047 words of memory out of 5000000
- 22141 multiletter control sequences out of 15000+600000
+ 3754 strings out of 478741
+ 54080 string characters out of 5860982
+ 416050 words of memory out of 5000000
+ 22142 multiletter control sequences out of 15000+600000
  482944 words of font info for 93 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 55i,8n,62p,811b,1722s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,62p,811b,1720s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Stulab3_G1.dvi (12 pages, 38588 bytes).
+Output written on out/Stulab3_G1.dvi (12 pages, 39992 bytes).

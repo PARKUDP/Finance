@@ -6,12 +6,13 @@
 \contentsline {subsection}{\numberline {2.2}データセット構築}{3}{}%
 \contentsline {subsection}{\numberline {2.3}モデル選定}{4}{}%
 \contentsline {subsection}{\numberline {2.4}パラメータ調整}{4}{}%
-\contentsline {paragraph}{エポック数}{7}{}%
-\contentsline {paragraph}{バッチサイズ}{7}{}%
-\contentsline {paragraph}{LSTMユニット数}{7}{}%
-\contentsline {paragraph}{Dense層}{7}{}%
-\contentsline {paragraph}{学習率}{7}{}%
-\contentsline {paragraph}{データの正規化}{8}{}%
+\contentsline {paragraph}{エポック数}{4}{}%
+\contentsline {paragraph}{バッチサイズ}{5}{}%
+\contentsline {paragraph}{LSTMユニット数}{5}{}%
+\contentsline {paragraph}{Dense層}{5}{}%
+\contentsline {paragraph}{学習率}{5}{}%
+\contentsline {paragraph}{データの正規化}{5}{}%
+\contentsline {paragraph}{RMSE}{5}{}%
 \contentsline {section}{\numberline {3}実験結果}{8}{}%
 \contentsline {paragraph}{WebページのURL：}{8}{}%
 \contentsline {section}{\numberline {4}考察}{10}{}%

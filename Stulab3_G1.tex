@@ -46,13 +46,7 @@
 \indent したがって、LSTMはRNNに比べて長期的な依存関係を保持するのに優れており、株価予測のようなデータにおいて、より正確な予測を実現する可能性が高いと判断した。このため、本実験ではLSTMモデルを選定した。
 
 \subsection{パラメータ調整}
-\indent 本実験では、LSTMモデルのパフォーマンスを最適化するために、いくつかのパラメータを調整しました。また、下記は主要なパラメータとその調整過程を示している。また、下記は、パラメータを調整する際のログを示している。
-\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが1の場合}, label=one]{./parameter/one.txt}
-\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが16の場合}, label=two]{./parameter/two.txt}
-\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが32の場合}, label=three]{./parameter/three.txt}
-\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが2048の場合}, label=four]{./parameter/four.txt}
-
-\indent 上記のListing \ref{one}、Listing \ref{two}、Listing \ref{three}、Listing \ref{four}を通じて、エポック数は20~30が最適であることがわかった。また、バッチサイズは16が最適であることがわかった。よって、下記のようにパラメータを設定した。
+\indent 本実験では、LSTMモデルのパフォーマンスを最適化するために、いくつかのパラメータを調整しました。また、下記は主要なパラメータとその調整過程を示している。
 \paragraph{エポック数}
 \indent モデルの訓練において、エポック数は重要なパラメータである。本実験では、エポック数を20に設定した。将来的には、エポック数を増やすことでモデルの収束状況や予測精度が向上する可能性があるため、さらに検討する予定である。
 
@@ -71,6 +65,17 @@
 \paragraph{データの正規化}
 \indent データの正規化は、モデルの収束速度と予測精度に大きな影響を与える。本実験では、MinMaxScalerを使用してデータを0から1の範囲にスケーリングした。将来的には、標準スケーリングやロバストスケーリングなどの他のスケーリング手法も試して、モデルの性能向上を図る予定である。
 
+\paragraph{RMSE}
+\indent 参考文献 \cite{RMSD}によると、RMSEとは実際の値と何らかのモデルに基づく予測値があるとき、両者の差を二乗して平均し、平方根（ルート）を取った値である。また、実行結果には誤差の最小値（min）と最大値（max）を追加している。
+
+\indent 最初にバッチサイズ1に固定し、エポック数を1、5、10、20、30、50の中で適切な値を探すことになった。その結果、エポック数が1、50の時はRMSEが1000を超えており、良好な結果とは言えないことが判明した。次に、バッチサイズを1 、16、32、64、128、256、512、1024、2048に調整したが、64以上のバッチサイズでは精度が低下することが明らかだったため、これらのログは省略している。\\
+\indent Listing \ref{one}、Listing \ref{two}、Listing \ref{three}、Listing \ref{four}は、パラメータを調整する際のログを示している。
+\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが1の場合}, label=one]{./parameter/one.txt}
+\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが16の場合}, label=two]{./parameter/two.txt}
+\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが32の場合}, label=three]{./parameter/three.txt}
+\lstinputlisting[language=, frame=single, breaklines=true, caption={バッチサイズが2048の場合}, label=four]{./parameter/four.txt}
+
+\indent 上記のListing \ref{one}、Listing \ref{two}、Listing \ref{three}、Listing \ref{four}を通じて、エポック数は20から30が最適であり、バッチサイズは16が最適であることがわかった。
 % グラフの読み方を説明する。特にy軸のところを説明した方がいい。また、できれば、Streamlit内容を入れた方がいい。
 \section{実験結果}
 \indent 本実験では、LSTMモデルを用いて1321.T（日経225）の終値を予測した。実験結果は図\ref{twopython}に示しているものである。
@@ -83,6 +88,7 @@
 
 \indent また、実際にこのモデルとStreamlitを用いて、次のようなページを作成したものである。\\
 \paragraph{WebページのURL：}\url{https://finance-svkvjevmpsyc9f9ru8yefz.streamlit.app/} \\
+
 \indent 上記のページでは、図\ref{Streamlit}のように3年間の株価データを表示し、それを用いて株価を予測するグラフを表示できるものである。 \\
 \indent 図\ref{twopython}には、訓練データ、実際のデータ、予測データの3つの線が示されている。青色の線は訓練データを表し、オレンジ色の線は実際のデータ、緑色の線はLSTMモデルによる予測データを示しているものである。軸ラベルはそれぞれ横軸が日付（Date）、縦軸が1321.Tの終値（Close Price of 1321.T）であり、縦軸の単位は円である。
 
@@ -113,6 +119,6 @@
   \bibitem{Sequential model} Kerasライブラリ、Sequential model、\url{https://keras.io/guides/sequential_model/}。
   \bibitem{Dense layer} Kerasライブラリ、Dense layer、\url{https://keras.io/api/layers/core_layers/dense/}。
   \bibitem{LSTM layer} Kerasライブラリ、LSTM layer、\url{https://keras.io/api/layers/recurrent_layers/lstm/}。
-  
+  \bibitem{RMSD} IT用語辞典、二乗平均平方根誤差 【RMSE】、\url{https://e-words.jp/w/%E4%BA%8C%E4%B9%97%E5%B9%B3%E5%9D%87%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AA%A4%E5%B7%AE.html}
 \end{thebibliography}
 \end{document}
