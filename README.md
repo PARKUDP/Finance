@@ -9,5 +9,11 @@
 - final.pyでは、StreamlitでWebページで株価予測ページを表示するためのコードである。
 - requirements.txtでは、Streamlitでデプロイするために、必要なファイル。
 
+
+## Streamlit
+下記のコマンドを順番にすれば、実行することができる。
+- pip install streamlit
+- streamlit run final.py
+
 # URL
 - https://finance-svkvjevmpsyc9f9ru8yefz.streamlit.app/
